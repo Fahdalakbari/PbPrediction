@@ -58,7 +58,7 @@ st.title("Bubble Point Pressure Prediction")
 st.markdown(
 """
 Predict **Bubble Point Pressure (Pb)** from reservoir fluid
-composition using the Artificial Neural Networks (ANNs).
+composition using the Artificial Neural Networks (ANNs)**.
 """
 )
 
@@ -72,67 +72,150 @@ col1, col2 = st.columns(2)
 
 with col1:
 
+    st.markdown("""
+    <div style="font-size:22px;font-weight:800;color:#004C99;margin-bottom:5px;">
+    Temperature (°F)
+    </div>
+    """, unsafe_allow_html=True)
     st.session_state["T"] = st.text_input(
-        "Temperature (°F)",
-        value=st.session_state["T"]
+        "",
+        value=st.session_state["T"],
+        key="T_input",
+        label_visibility="collapsed"
     )
 
+    st.markdown("""
+    <div style="font-size:22px;font-weight:800;color:#004C99;margin-bottom:5px;">
+    N₂ (mol%)
+    </div>
+    """, unsafe_allow_html=True)
     st.session_state["N2"] = st.text_input(
-        "N₂ (mol%)",
-        value=st.session_state["N2"]
+        "",
+        value=st.session_state["N2"],
+        key="N2_input",
+        label_visibility="collapsed"
     )
 
+    st.markdown("""
+    <div style="font-size:22px;font-weight:800;color:#004C99;margin-bottom:5px;">
+    C1 (mol%)
+    </div>
+    """, unsafe_allow_html=True)
     st.session_state["C1"] = st.text_input(
-        "C1 (mol%)",
-        value=st.session_state["C1"]
+        "",
+        value=st.session_state["C1"],
+        key="C1_input",
+        label_visibility="collapsed"
     )
 
+    st.markdown("""
+    <div style="font-size:22px;font-weight:800;color:#004C99;margin-bottom:5px;">
+    C2 (mol%)
+    </div>
+    """, unsafe_allow_html=True)
     st.session_state["C2"] = st.text_input(
-        "C2 (mol%)",
-        value=st.session_state["C2"]
+        "",
+        value=st.session_state["C2"],
+        key="C2_input",
+        label_visibility="collapsed"
     )
 
+    st.markdown("""
+    <div style="font-size:22px;font-weight:800;color:#004C99;margin-bottom:5px;">
+    C3 (mol%)
+    </div>
+    """, unsafe_allow_html=True)
     st.session_state["C3"] = st.text_input(
-        "C3 (mol%)",
-        value=st.session_state["C3"]
+        "",
+        value=st.session_state["C3"],
+        key="C3_input",
+        label_visibility="collapsed"
     )
 
+    st.markdown("""
+    <div style="font-size:22px;font-weight:800;color:#004C99;margin-bottom:5px;">
+    C4 (mol%)
+    </div>
+    """, unsafe_allow_html=True)
     st.session_state["C4"] = st.text_input(
-        "C4 (mol%)",
-        value=st.session_state["C4"]
+        "",
+        value=st.session_state["C4"],
+        key="C4_input",
+        label_visibility="collapsed"
     )
-
 
 with col2:
 
+    st.markdown("""
+    <div style="font-size:22px;font-weight:800;color:#004C99;margin-bottom:5px;">
+    C5 (mol%)
+    </div>
+    """, unsafe_allow_html=True)
     st.session_state["C5"] = st.text_input(
-        "C5 (mol%)",
-        value=st.session_state["C5"]
+        "",
+        value=st.session_state["C5"],
+        key="C5_input",
+        label_visibility="collapsed"
     )
 
+    st.markdown("""
+    <div style="font-size:22px;font-weight:800;color:#004C99;margin-bottom:5px;">
+    C6 (mol%)
+    </div>
+    """, unsafe_allow_html=True)
     st.session_state["C6"] = st.text_input(
-        "C6 (mol%)",
-        value=st.session_state["C6"]
+        "",
+        value=st.session_state["C6"],
+        key="C6_input",
+        label_visibility="collapsed"
     )
 
+    st.markdown("""
+    <div style="font-size:22px;font-weight:800;color:#004C99;margin-bottom:5px;">
+    C7+ (mol%)
+    </div>
+    """, unsafe_allow_html=True)
     st.session_state["C7"] = st.text_input(
-        "C7+ (mol%)",
-        value=st.session_state["C7"]
+        "",
+        value=st.session_state["C7"],
+        key="C7_input",
+        label_visibility="collapsed"
     )
 
+    st.markdown("""
+    <div style="font-size:22px;font-weight:800;color:#004C99;margin-bottom:5px;">
+    MW C7+
+    </div>
+    """, unsafe_allow_html=True)
     st.session_state["MWC7"] = st.text_input(
-        "MW C7+",
-        value=st.session_state["MWC7"]
+        "",
+        value=st.session_state["MWC7"],
+        key="MWC7_input",
+        label_visibility="collapsed"
     )
 
+    st.markdown("""
+    <div style="font-size:22px;font-weight:800;color:#004C99;margin-bottom:5px;">
+    H₂S (mol%)
+    </div>
+    """, unsafe_allow_html=True)
     st.session_state["H2S"] = st.text_input(
-        "H₂S (mol%)",
-        value=st.session_state["H2S"]
+        "",
+        value=st.session_state["H2S"],
+        key="H2S_input",
+        label_visibility="collapsed"
     )
 
+    st.markdown("""
+    <div style="font-size:22px;font-weight:800;color:#004C99;margin-bottom:5px;">
+    CO₂ (mol%)
+    </div>
+    """, unsafe_allow_html=True)
     st.session_state["CO2"] = st.text_input(
-        "CO₂ (mol%)",
-        value=st.session_state["CO2"]
+        "",
+        value=st.session_state["CO2"],
+        key="CO2_input",
+        label_visibility="collapsed"
     )
 
 st.divider()
@@ -144,14 +227,12 @@ st.divider()
 col1, col2 = st.columns(2)
 
 with col1:
-
     predict_button = st.button(
         "Predict",
         use_container_width=True
     )
 
 with col2:
-
     clear_button = st.button(
         "Clear",
         use_container_width=True
