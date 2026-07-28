@@ -53,13 +53,12 @@ for k, v in DEFAULTS.items():
 # Header
 # ==========================================================
 
-st.title("Bubble Point Pressure Prediction using PINN")
+st.title("Bubble Point Pressure Prediction")
 
 st.markdown(
 """
 Predict **Bubble Point Pressure (Pb)** from reservoir fluid
-composition using the trained
-**Physics-Informed Neural Network (PINN)**.
+composition using the Artificial Neural Networks (ANNs)**.
 """
 )
 
