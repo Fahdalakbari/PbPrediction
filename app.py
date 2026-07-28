@@ -19,7 +19,7 @@ col1, col2, col3 = st.columns([1, 6, 1])
 
 with col2:
     st.image(
-        "images/header.png",
+        "header.png",
         width=700
     )
 
