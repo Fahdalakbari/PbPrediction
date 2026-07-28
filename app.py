@@ -58,7 +58,7 @@ st.title("Bubble Point Pressure Prediction")
 st.markdown(
 """
 Predict **Bubble Point Pressure (Pb)** from reservoir fluid
-composition using the Artificial Neural Networks (ANNs)**.
+composition using the Artificial Neural Networks (ANNs).
 """
 )
 
